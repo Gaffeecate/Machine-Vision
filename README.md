@@ -1,2 +1,2 @@
-# machineVision
-Machine vision, feature, matching, pattern searching
+# Machine Vision
+Machine Vision, feature, matching, pattern searching
