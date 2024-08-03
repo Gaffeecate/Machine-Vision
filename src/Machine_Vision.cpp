@@ -22,7 +22,6 @@ int main() {
         if (detector.detectDefects(frame, detectedFrame)) {
             std::cout << "결함이 감지되었습니다!" << std::endl;
             imshow("Detected Defects", detectedFrame);
-            imwrite("defect_detected.png", detectedFrame); // 캡쳐 및 저장
         }
 
         if (waitKey(30) >= 0) break;
