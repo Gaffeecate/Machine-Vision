@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2c0d5128-4b06-47cf-8685-d905e2cdf43b}</ProjectGuid>
-    <RootNamespace>MachineVision</RootNamespace>
+    <ProjectGuid>{a569b817-17d6-4eee-b99c-9bfcbfe63d14}</ProjectGuid>
+    <RootNamespace>visioncontrol</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;$(OPENCV_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,11 +133,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\DefectDetector.cpp" />
-    <ClCompile Include="src\Machine_Vision.cpp" />
+    <ClCompile Include="src\defect_detector.cpp" />
+    <ClCompile Include="src\vision_control.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\DefectDetector.h" />
+    <ClInclude Include="include\defect_detector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,13 +1,12 @@
-// src/DefectDetector.cpp
-#include "DefectDetector.h"
+#include "../include/Defect_Detector.h"
 #include <opencv2/imgproc.hpp>
 
 using namespace cv;
 using namespace std;
 
-DefectDetector::DefectDetector(int threshold) : threshold_(threshold) {}
+Defect_Detector::Defect_Detector(int threshold) : threshold_(threshold) {}
 
-bool DefectDetector::detectDefects(const Mat& frame, Mat& output) {
+bool Defect_Detector::detectDefects(const Mat& frame, Mat& output) {
     Mat grayImage, blurredImage, binaryImage;
 
     // 그레이스케일 변환

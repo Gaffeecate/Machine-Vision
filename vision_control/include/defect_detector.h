@@ -1,12 +1,12 @@
 // include/DefectDetector.h
-#ifndef DEFECTDETECTOR_H
-#define DEFECTDETECTOR_H
+#ifndef DEFECT_DETECTOR_H
+#define DEFECT_DETECTOR_H
 
 #include <opencv2/opencv.hpp>
 
-class DefectDetector {
+class Defect_Detector {
 public:
-    DefectDetector(int threshold = 100);
+    Defect_Detector(int threshold = 100);
     bool detectDefects(const cv::Mat& frame, cv::Mat& output);
 private:
     int threshold_;
