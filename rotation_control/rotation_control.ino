@@ -6,7 +6,7 @@ int servoPin = 9; // 서보 모터 연결 핀
 void setup() {
   myservo.attach(servoPin);
   Serial.begin(9600);
-  Serial.println("0~180까지 입력:");
+  Serial.println("Enter angle (0-180):");
 }
 
 void loop() {
@@ -15,18 +15,17 @@ void loop() {
     
     if (angle >= 0 && angle <= 180) {
       myservo.write(angle);
-      Serial.print("Servo rotate to ");
+      Serial.print("Servo rotated to ");
       Serial.print(angle);
       Serial.println(" degrees");
     } else {
-      Serial.println("0~180까지만 입력가능");
+      Serial.println("Invalid angle. Enter 0-180");
     }
     
-    // 입력 버퍼 비우기
     while (Serial.available() > 0) {
       Serial.read();
     }
     
-    Serial.println("0~180까지 입력:");
+    Serial.println("Enter next angle (0-180):");
   }
 }
